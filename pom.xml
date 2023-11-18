@@ -36,6 +36,12 @@
 			<artifactId>spring-kafka-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -51,6 +57,14 @@
 					<image>
 						<builder>paketobuildpacks/builder-jammy-tiny:latest</builder>
 					</image>
+
+					<excludes>
+						<exclude>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclude>
+					</excludes>
+
 				</configuration>
 			</plugin>
 		</plugins>

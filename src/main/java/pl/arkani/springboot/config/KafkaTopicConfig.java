@@ -15,4 +15,20 @@ public class KafkaTopicConfig {
             .build();
 
     }
+
+//    @Bean
+//    public NewTopic javaguidesJsonTopic() {
+//        return TopicBuilder.name("javaguides_json")
+//               // .partitions(1)
+//                .build();
+//
+//    }
+
+    @Bean
+    public NewTopic javaguidesJsonTopic2() {
+        return TopicBuilder.name("javaguides-json")
+                // .partitions(1)
+                .build();
+
+    }
 }
